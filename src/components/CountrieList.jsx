@@ -27,6 +27,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "../components/CountrieList.css";
 import Drawersidebar from "./DrawerSidebar";
+import qatarcity from "./qatar_city.png";
+import qatarpic2 from "./qatar_city2.png";
 
 // CONSTANTES DE STYLE
 const Search = styled("div")(({ theme }) => ({
@@ -222,12 +224,14 @@ function CountryList({ window }) {
           }}
         >
           <Toolbar />
+          <img src={qatarpic2} alt="" width="700" height="500" />
           <Typography
             fontFamily={"serif"}
             fontSize={16}
             textAlign={"justify"}
             paragraph
             marginBottom={10}
+            marginTop={5}
           >
             The 2022 FIFA World Cup was an international football tournament
             contested by the men's national teams of FIFA's member associations
@@ -263,9 +267,10 @@ function CountryList({ window }) {
             strong football culture, scheduling changes, and allegations of
             bribery for hosting rights and wider FIFA corruption.[D]
           </Typography>
+          <img src={qatarcity} alt="" width="700" height="500" />
         </Box>
       </Box>
-      <Typography>
+      <Typography marginTop={5}>
         <div>
           <div
             sx={{
@@ -275,7 +280,7 @@ function CountryList({ window }) {
               alignItems: "center",
             }}
           >
-            <SearchIcon sx={{ paddingTop: 1 }} />
+            <SearchIcon sx={{ paddingTop: 1, marginLeft: 10 }} />
             <input
               className="search-input"
               onChange={(e) => {

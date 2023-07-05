@@ -26,6 +26,8 @@ import HomeIcon from "@mui/icons-material/Home";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Drawersidebar from "./DrawerSidebar";
+import referees from "./referees_wc_2022.png";
+import gassama from "./gassama.png";
 
 // CONSTANTES DE STYLE
 const Search = styled("div")(({ theme }) => ({
@@ -219,12 +221,14 @@ function RefereesList({ window }) {
           }}
         >
           <Toolbar />
+          <img src={referees} alt="referess" width="700" height="500" />
           <Typography
             fontFamily={"serif"}
             fontSize={16}
             textAlign={"justify"}
             paragraph
             marginBottom={10}
+            marginTop={5}
           >
             The 2022 FIFA World Cup was an international football tournament
             contested by the men's national teams of FIFA's member associations
@@ -260,9 +264,18 @@ function RefereesList({ window }) {
             strong football culture, scheduling changes, and allegations of
             bribery for hosting rights and wider FIFA corruption.[D]
           </Typography>
+          <img src={gassama} alt="gassama" width="700" height="500" />
         </Box>
       </Box>
-      <Typography>
+      <Box
+        component="main"
+        sx={{
+          flexGrow: 1,
+          p: 3,
+          width: { sm: `calc(100% - ${drawerWidth}px)` },
+        }}
+      ></Box>
+      <Typography marginTop={10}>
         <div>
           <TableContainer component={Paper}>
             <Table

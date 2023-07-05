@@ -25,6 +25,7 @@ import axios from "axios";
 import "../components/CountriesFilter.css";
 import { Link } from "react-router-dom";
 import Drawersidebar from "./DrawerSidebar";
+import qatarpic from "./qatar_city.png";
 
 // CONSTANTES DE STYLE
 const Search = styled("div")(({ theme }) => ({
@@ -209,11 +210,13 @@ function CountryList({ window }) {
           }}
         >
           <Toolbar />
+          <img src={qatarpic} alt="" width="700" height="500" />
           <Typography
             fontFamily={"serif"}
             textAlign={"justify"}
             paragraph
             marginBottom={10}
+            marginTop={5}
           >
             The 2022 FIFA World Cup was an international football tournament
             contested by the men's national teams of FIFA's member associations
