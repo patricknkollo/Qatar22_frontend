@@ -369,7 +369,13 @@ function PersonList({ window }) {
           }}
         >
           <Toolbar />
-          <Typography paragraph>
+          <Typography
+            fontFamily={"serif"}
+            fontSize={16}
+            textAlign={"justify"}
+            paragraph
+            marginBottom={10}
+          >
             The 2022 FIFA World Cup was an international football tournament
             contested by the men's national teams of FIFA's member associations
             and 22nd edition of the FIFA World Cup. It took place in Qatar from

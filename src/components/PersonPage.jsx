@@ -62,7 +62,7 @@ function PersonPage(props) {
                 component="div"
               ></Typography>
               <Typography variant="body2" color="text.secondary">
-                <table>
+                <table data-testid="person-identity">
                   <tr>
                     <td>nom: </td>
                     <td>{person.nom}</td>
