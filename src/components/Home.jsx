@@ -2,34 +2,20 @@ import {
   alpha,
   AppBar,
   Box,
-  Button,
   CssBaseline,
-  Divider,
   Drawer,
   IconButton,
   InputBase,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Paper,
   styled,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
   Toolbar,
   Typography,
 } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import SearchIcon from "@mui/icons-material/Search";
 import HomeIcon from "@mui/icons-material/Home";
-import axios from "axios";
-import Drawer_sidebar from "./DrawerSidebar";
+//import axios from "axios";
+import Drawersidebar from "./DrawerSidebar";
 import "./Home.css";
 import image1 from "./qatar22_bild.png";
 
@@ -79,10 +65,10 @@ function Home({ window }) {
   const drawerWidth = 240;
 
   //TABLE CONSTANTES
-  const [buteurs, setButeurs] = useState([]);
+  //const [buteurs, setButeurs] = useState([]);
   const [nomPrenom, setNomPrenom] = useState("");
 
-  useEffect(() => {
+  /*   useEffect(() => {
     axios
       .get("http://localhost:8080/api/buteur/controller/scorers")
       .then((resp) => {
@@ -93,7 +79,7 @@ function Home({ window }) {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, []); */
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
@@ -182,7 +168,7 @@ function Home({ window }) {
             }}
             data-test="drawer1"
           >
-            <Drawer_sidebar />
+            <Drawersidebar />
           </Drawer>
           <Drawer
             variant="permanent"
@@ -195,7 +181,7 @@ function Home({ window }) {
             }}
             data-test="drawer2"
           >
-            <Drawer_sidebar />
+            <Drawersidebar />
           </Drawer>
         </Box>
         <Box
@@ -208,7 +194,7 @@ function Home({ window }) {
         >
           <Toolbar />
           <div>
-            <img src={image1} id="ktar-img1" />
+            <img src={image1} alt="" id="ktar-img1" />
           </div>
           <Typography
             fontFamily={"serif"}

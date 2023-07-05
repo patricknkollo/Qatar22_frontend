@@ -4,15 +4,9 @@ import {
   Box,
   Button,
   CssBaseline,
-  Divider,
   Drawer,
   IconButton,
   InputBase,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
   Paper,
   Stack,
   styled,
@@ -28,16 +22,9 @@ import {
 import React, { useEffect, useState } from "react";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import SearchIcon from "@mui/icons-material/Search";
-import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
-import SportsIcon from "@mui/icons-material/Sports";
-import StadiumSharpIcon from "@mui/icons-material/StadiumSharp";
-import PersonSharpIcon from "@mui/icons-material/PersonSharp";
-import GroupsSharpIcon from "@mui/icons-material/GroupsSharp";
-import LanguageSharpIcon from "@mui/icons-material/LanguageSharp";
 import HomeIcon from "@mui/icons-material/Home";
-import FilterAltIcon from "@mui/icons-material/FilterAlt";
 import axios from "axios";
-import Drawer_sidebar from "./DrawerSidebar";
+import Drawersidebar from "./DrawerSidebar";
 
 // CONSTANTES DE STYLE
 const Search = styled("div")(({ theme }) => ({
@@ -204,7 +191,7 @@ function ButeursList({ window }) {
             }}
             data-test="drawer1"
           >
-            <Drawer_sidebar />
+            <Drawersidebar />
           </Drawer>
           <Drawer
             variant="permanent"
@@ -217,7 +204,7 @@ function ButeursList({ window }) {
             }}
             data-test="drawer2"
           >
-            <Drawer_sidebar />
+            <Drawersidebar />
           </Drawer>
         </Box>
         <Box
