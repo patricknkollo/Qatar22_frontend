@@ -31,7 +31,7 @@ function PersonPage(props) {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  });
 
   return (
     <>

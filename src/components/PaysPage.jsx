@@ -31,7 +31,7 @@ function PaysPage(props) {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  });
 
   return (
     <>
