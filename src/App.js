@@ -1,13 +1,10 @@
-import { Switch } from "@mui/material";
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import CountryList from "./components/CountrieList";
 import Footer from "./components/Footer";
 import JoueurSidebar from "./components/JoueurSidebar";
-import Navbar from "./components/Navbar";
 import PersonsList from "./components/PersonsList";
 import RefereesList from "./components/RefereesList";
-import Sidebar from "./components/Sidebar";
 import ButeursList from "./components/ButeursList";
 import MatchesList from "./components/MatchesList";
 import ClubsList from "./components/ClubsList";

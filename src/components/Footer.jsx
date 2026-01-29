@@ -2,10 +2,6 @@ import {
   Box,
   Container,
   Grid,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
   Typography,
 } from "@mui/material";
 

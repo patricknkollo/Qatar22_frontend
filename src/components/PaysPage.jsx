@@ -8,20 +8,15 @@ import {
   CardActions,
   CardContent,
   CardMedia,
-  Drawer,
   Stack,
 } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import { Link, useParams } from "react-router-dom";
-import Drawer_sidebar from "./DrawerSidebar";
+import {  useParams } from "react-router-dom";
 
 const drawerWidth = 240;
 function PaysPage(props) {
   const [pays, setPays] = useState([]);
   const params = useParams();
-
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
 
   useEffect(() => {
     axios

@@ -1,5 +1,5 @@
 import { styled, alpha } from "@mui/material/styles";
-import { AppBar, Box, IconButton, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, IconButton, Toolbar } from "@mui/material";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 
@@ -52,8 +52,6 @@ function Navbar() {
 
   const mobileMenuId = "primary-search-account-menu-mobile";
   const [firstname, setFirstname] = useState("");
-
-  const menuId = "primary-search-account-menu";
 
   return (
     <>

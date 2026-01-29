@@ -1,7 +1,6 @@
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-import axios, { AxiosResponse } from "axios";
+import { render, waitFor } from "@testing-library/react";
+import axios from "axios";
 import "@testing-library/jest-dom/extend-expect";
-import { Person } from "@mui/icons-material";
 import PersonList from "./PersonsList";
 
 describe("70450576", () => {
