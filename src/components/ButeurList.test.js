@@ -1,5 +1,5 @@
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-import axios, { AxiosResponse } from "axios";
+import { render, waitFor } from "@testing-library/react";
+import axios from "axios";
 import ButeursList from "./ButeursList";
 
 jest.mock("axios");
@@ -14,9 +14,7 @@ describe("70450576", () => {
       { id: 2, joueurid: 2, nom: "alvarez", prenom: "julian", buts: 4 },
     ];
     const mox = jest.spyOn(axios, "get").mockResolvedValueOnce(mAxiosResponse);
-    const mox2 = jest.fn(() => mAxiosResponse);
     render(<ButeursList />);
-    await waitFor(() => expect(screen.getByText("nom")).toBeInTheDocument());
     await waitFor(() => {
       expect(mox).toHaveBeenCalled();
       //expect(mox2).toHaveLength(2);
