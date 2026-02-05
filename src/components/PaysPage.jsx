@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import "./PersonPage.css";
 import {
   Box,
@@ -12,6 +11,7 @@ import {
 } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import {  useParams } from "react-router-dom";
+import api from "./AxiosConfig";
 
 const drawerWidth = 240;
 function PaysPage(props) {
@@ -19,9 +19,9 @@ function PaysPage(props) {
   const params = useParams();
 
   useEffect(() => {
-    axios
+    api
       .get(
-        ` http://localhost:8080/api/countries/controller/country/${params.paysid}`
+        `/api/countries/controller/country/${params.paysid}`
       )
       .then((resp) => {
         console.log(resp.data);

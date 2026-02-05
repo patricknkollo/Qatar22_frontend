@@ -23,9 +23,9 @@ import React, { useEffect, useState } from "react";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import SearchIcon from "@mui/icons-material/Search";
 import HomeIcon from "@mui/icons-material/Home";
-import axios from "axios";
 import Drawersidebar from "./DrawerSidebar";
 import edf from "./france_team.png";
+import api from "./AxiosConfig";
 
 // CONSTANTES DE STYLE
 const Search = styled("div")(({ theme }) => ({
@@ -78,8 +78,8 @@ function MatchesList({ window }) {
   const [joueurs, setJoueurs] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:8080/api/match/controller/matchs")
+    api
+      .get("/api/match/controller/matchs")
       .then((resp) => {
         //const produits = resp.data;
         console.log(resp.data);
@@ -120,7 +120,7 @@ function MatchesList({ window }) {
                   aria-haspopup="true"
                   color="inherit"
                   component="a"
-                  href="http://localhost:3000/home"
+                  href="/home"
                 >
                   <HomeIcon />
                 </IconButton>
@@ -154,7 +154,7 @@ function MatchesList({ window }) {
                   style={{ paddingTop: 0, paddingLeft: 10 }}
                 >
                   <Button
-                    href="http://localhost:8080/api/match/controller/match/report"
+                    href="/api/match/controller/match/report"
                     variant="contained"
                     color="success"
                     id="pdf-report"

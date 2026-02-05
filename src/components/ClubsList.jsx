@@ -23,9 +23,9 @@ import React, { useEffect, useState } from "react";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import SearchIcon from "@mui/icons-material/Search";
 import HomeIcon from "@mui/icons-material/Home";
-import axios from "axios";
 import Drawersidebar from "./DrawerSidebar";
 import chelsea from "./chelsea_drogba.png";
+import api from "./AxiosConfig";
 
 // CONSTANTES DE STYLE
 const Search = styled("div")(({ theme }) => ({
@@ -78,8 +78,8 @@ function JoueurSidebar({ window }) {
   const [clubs, setClubs] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:8080/api/club/controller/clubs")
+    api
+      .get("/api/club/controller/clubs")
       .then((resp) => {
         console.log(resp.data);
         setClubs(resp.data);
@@ -119,7 +119,7 @@ function JoueurSidebar({ window }) {
                   aria-haspopup="true"
                   color="inherit"
                   component="a"
-                  href="http://localhost:3000/home"
+                  href="/home"
                 >
                   <HomeIcon />
                 </IconButton>
@@ -153,7 +153,7 @@ function JoueurSidebar({ window }) {
                   style={{ paddingTop: 0, paddingLeft: 10 }}
                 >
                   <Button
-                    href="http://localhost:8080/api/person/controller/person/report"
+                    href="/api/person/controller/person/report"
                     variant="contained"
                     color="success"
                     id="pdf-report"

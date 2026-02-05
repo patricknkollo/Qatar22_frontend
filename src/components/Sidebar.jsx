@@ -38,7 +38,7 @@ function Sidebar(props) {
           key={"Email"}
           disablePadding
           component="a"
-          href="http://localhost:3000/buteurs"
+          href="/buteurs"
           style={{ color: "initial" }}
         >
           <ListItemButton>
@@ -51,7 +51,7 @@ function Sidebar(props) {
         <ListItem
           /* key={text} */ disablePadding
           component="a"
-          href="http://localhost:3000/pays"
+          href="/pays"
           style={{ color: "initial" }}
         >
           <ListItemButton>
@@ -64,7 +64,7 @@ function Sidebar(props) {
         <ListItem
           /* key={text} */ disablePadding
           component="a"
-          href="http://localhost:3000/referees"
+          href="/referees"
           style={{ color: "initial" }}
         >
           <ListItemButton>
@@ -78,7 +78,7 @@ function Sidebar(props) {
         <ListItem
           /* key={text} */ disablePadding
           component="a"
-          href="http://localhost:3000/match"
+          href="/match"
           style={{ color: "initial" }}
         >
           <ListItemButton>
@@ -96,7 +96,7 @@ function Sidebar(props) {
           key={"Email"}
           disablePadding
           component="a"
-          href="http://localhost:3000/persons"
+          href="/persons"
           style={{ color: "initial" }}
         >
           <ListItemButton>
@@ -110,7 +110,7 @@ function Sidebar(props) {
           key={"Email"}
           disablePadding
           component="a"
-          href="http://localhost:3000/joueurs"
+          href="/joueurs"
           style={{ color: "initial" }}
         >
           <ListItemButton>
@@ -123,7 +123,7 @@ function Sidebar(props) {
         <ListItem
           /* key={text} */ disablePadding
           component="a"
-          href="http://localhost:3000/clubs"
+          href="/clubs"
           style={{ color: "initial" }}
         >
           <ListItemButton>
@@ -141,7 +141,7 @@ function Sidebar(props) {
         style={{ paddingTop: 35, paddingLeft: 10 }}
       >
         <Button
-          href="http://localhost:8080/api/person/controller/person/report"
+          href="/api/person/controller/person/report"
           variant="contained"
           color="success"
         >

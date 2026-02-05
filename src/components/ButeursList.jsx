@@ -19,13 +19,13 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import SearchIcon from "@mui/icons-material/Search";
 import HomeIcon from "@mui/icons-material/Home";
-import axios from "axios";
 import Drawersidebar from "./DrawerSidebar";
 import neymbames from "./neymar_mbappe_messi.png";
+import api from "./AxiosConfig";
 
 // CONSTANTES DE STYLE
 const Search = styled("div")(({ theme }) => ({
@@ -77,8 +77,8 @@ function ButeursList({ window }) {
   const [nomPrenom, setNomPrenom] = useState("");
 
   useEffect(() => {
-    axios
-      .get("http://localhost:8080/api/buteur/controller/scorers")
+    api
+      .get("/api/buteur/controller/scorers")
       .then((resp) => {
         //const produits = resp.data;
         console.log(resp.data);
@@ -119,7 +119,7 @@ function ButeursList({ window }) {
                   aria-haspopup="true"
                   color="inherit"
                   component="a"
-                  href="http://localhost:3000/home"
+                  href="/home"
                 >
                   <HomeIcon />
                 </IconButton>
@@ -158,7 +158,7 @@ function ButeursList({ window }) {
                   style={{ paddingTop: 0, paddingLeft: 10 }}
                 >
                   <Button
-                    href="http://localhost:8080/api/buteur/controller/scorers/report"
+                    href="/api/buteur/controller/scorers/report"
                     variant="contained"
                     color="success"
                     id="pdf-report"

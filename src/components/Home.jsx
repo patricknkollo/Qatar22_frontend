@@ -69,8 +69,8 @@ function Home({ window }) {
   const [nomPrenom, setNomPrenom] = useState("");
 
   /*   useEffect(() => {
-    axios
-      .get("http://localhost:8080/api/buteur/controller/scorers")
+    api
+      .get("/api/buteur/controller/scorers")
       .then((resp) => {
         //const produits = resp.data;
         console.log(resp.data);
@@ -111,7 +111,7 @@ function Home({ window }) {
                   aria-haspopup="true"
                   color="inherit"
                   component="a"
-                  href="http://localhost:3000/home"
+                  href="/home"
                 >
                   <HomeIcon />
                 </IconButton>

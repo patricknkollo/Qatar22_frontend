@@ -73,7 +73,7 @@ function Navbar() {
                 aria-haspopup="true"
                 color="inherit"
                 component="a"
-                href="http://localhost:3000/home"
+                href="/home"
               >
                 <HomeIcon />
               </IconButton>

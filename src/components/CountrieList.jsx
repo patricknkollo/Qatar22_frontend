@@ -23,12 +23,12 @@ import React, { useEffect, useState } from "react";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import SearchIcon from "@mui/icons-material/Search";
 import HomeIcon from "@mui/icons-material/Home";
-import axios from "axios";
 import { Link } from "react-router-dom";
 import "../components/CountrieList.css";
 import Drawersidebar from "./DrawerSidebar";
 import qatarcity from "./qatar_city.png";
 import qatarpic2 from "./qatar_city2.png";
+import api from "./AxiosConfig";
 
 // CONSTANTES DE STYLE
 const Search = styled("div")(({ theme }) => ({
@@ -83,8 +83,8 @@ function CountryList({ window }) {
   //const [search, setSearch] = useState("");
 
   useEffect(() => {
-    axios
-      .get("http://localhost:8080/api/countries/controller/countries")
+    api
+      .get("/api/countries/controller/countries")
       .then((resp) => {
         //const produits = resp.data;
         console.log(resp.data);
@@ -131,7 +131,7 @@ function CountryList({ window }) {
                   aria-haspopup="true"
                   color="inherit"
                   component="a"
-                  href="http://localhost:3000/home"
+                  href="/home"
                 >
                   <HomeIcon />
                 </IconButton>
@@ -165,7 +165,7 @@ function CountryList({ window }) {
                   style={{ paddingTop: 0, paddingLeft: 10 }}
                 >
                   <Button
-                    href="http://localhost:8080/api/person/controller/person/report"
+                    href="/api/person/controller/person/report"
                     variant="contained"
                     color="success"
                     id="pdf-report"

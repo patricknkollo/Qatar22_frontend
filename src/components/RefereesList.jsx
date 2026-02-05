@@ -82,7 +82,7 @@ function RefereesList({ window }) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/referees/controller/referees")
+      .get("/api/referees/controller/referees")
       .then((resp) => {
         //const produits = resp.data;
         console.log(resp.data);
@@ -123,7 +123,7 @@ function RefereesList({ window }) {
                   aria-haspopup="true"
                   color="inherit"
                   component="a"
-                  href="http://localhost:3000/home"
+                  href="/home"
                 >
                   <HomeIcon />
                 </IconButton>
@@ -162,7 +162,7 @@ function RefereesList({ window }) {
                   style={{ paddingTop: 0, paddingLeft: 10 }}
                 >
                   <Button
-                    href="http://localhost:8080/api/referees/controller/referees/report"
+                    href="/api/referees/controller/referees/report"
                     variant="contained"
                     color="success"
                     id="pdf-report"
