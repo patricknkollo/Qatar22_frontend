@@ -37,8 +37,8 @@ function Sidebar(props) {
         <ListItem
           key={"Email"}
           disablePadding
-          component="a"
-          href="/buteurs"
+          component="NavLink"
+          to="/buteurs"
           style={{ color: "initial" }}
         >
           <ListItemButton>
@@ -50,8 +50,8 @@ function Sidebar(props) {
         </ListItem>
         <ListItem
           /* key={text} */ disablePadding
-          component="a"
-          href="/pays"
+          component="NavLink"
+          to="/pays"
           style={{ color: "initial" }}
         >
           <ListItemButton>
@@ -63,8 +63,8 @@ function Sidebar(props) {
         </ListItem>
         <ListItem
           /* key={text} */ disablePadding
-          component="a"
-          href="/referees"
+          component="NavLink"
+          to="/referees"
           style={{ color: "initial" }}
         >
           <ListItemButton>
@@ -77,8 +77,8 @@ function Sidebar(props) {
 
         <ListItem
           /* key={text} */ disablePadding
-          component="a"
-          href="/match"
+          component="NavLink"
+          to="/match"
           style={{ color: "initial" }}
         >
           <ListItemButton>
@@ -95,22 +95,22 @@ function Sidebar(props) {
         <ListItem
           key={"Email"}
           disablePadding
-          component="a"
-          href="/persons"
+          component="NavLink"
+          to="/persons"
           style={{ color: "initial" }}
         >
           <ListItemButton>
             <ListItemIcon>
               <PersonSharpIcon style={{ color: "#93C572" }} />
             </ListItemIcon>
-            <ListItemText primary={"persons"} />
+            <ListItemText primary={"Persones"} />
           </ListItemButton>
         </ListItem>
         <ListItem
           key={"Email"}
           disablePadding
-          component="a"
-          href="/joueurs"
+          component="NavLink"
+          to="/joueurs"
           style={{ color: "initial" }}
         >
           <ListItemButton>
@@ -122,8 +122,8 @@ function Sidebar(props) {
         </ListItem>
         <ListItem
           /* key={text} */ disablePadding
-          component="a"
-          href="/clubs"
+          component="NavLink"
+          to="/clubs"
           style={{ color: "initial" }}
         >
           <ListItemButton>
